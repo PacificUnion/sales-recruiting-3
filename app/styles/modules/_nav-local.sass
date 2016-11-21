@@ -1,0 +1,36 @@
+.nav-local
+	position: fixed
+	color: $green
+	z-index: 50
+	display: block
+	right: 2% 
+	top: 0
+	width: 50%
+	padding-top: 2%
+	opacity: 1
+	// transform: translateY(0px)
+	transition: opacity 300ms ease-in, all 300ms ease-in
+	ul
+		width: 100%
+		li, a
+			display: inline-block
+			color: $white
+			list-style-type: none
+			font-family: 'Gotham Bold'
+			text-transform: uppercase 
+			padding-right: 5% 
+			text-shadow: -2.1px 2.1px 3px rgba(0, 0, 0, 0.3)
+	&.active
+		right: 17.5% 
+		
+	&.hide-up
+		opacity: 0
+		transform: translateY(-100px)
+
+
+	display: none
+	
+@media screen and (min-width: 1024px)
+	.nav-local
+		display: block
+			

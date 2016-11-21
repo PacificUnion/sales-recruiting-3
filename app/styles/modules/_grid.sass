@@ -1,0 +1,98 @@
+.gridded
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	position: absolute
+	
+	.double, .single
+		width: 100%
+		height: 50%
+		transition: width 150ms ease-in
+		float: left
+		h3, p
+			transition: all 300ms ease-in 700ms
+			color: $white
+			padding: 1rem 3rem
+			text-align: left
+			line-height: 2.5rem
+		h3
+			font-family: 'Droid Serif', serif
+			font-size: 2rem
+			margin: 0
+		p
+			font-family: 'Gotham Book'
+			font-size: 1rem
+	.frame
+		background-size: cover
+		background-repeat: no-repeat 
+		background-position: center 
+		&-text
+			height: 50%
+			padding-top: 3rem
+			
+		&-1
+			background-image: url(../images/image1.jpg)
+		&-2
+			background-color: $dark-gray
+		&-3
+			background-image: url(../images/image2.jpg)
+		&-4
+			background-image: url(../images/image3.jpg)
+		&-5
+			background-image: url(../images/image4.jpg)
+		&-6
+			background-color: $blue
+		&-7
+			background-color: $green 
+		&-8
+			background-image: url(../images/image5.jpg)
+		&-9 
+			background-image: url(../images/image6.jpg)
+		&-10
+		 	background-image: url(../images/image7.jpg) 
+		
+			
+	@media screen and (min-width: 768px)
+		.double
+			width: 66.66%
+			height: 33.33%
+		.single
+			width: 33.33%
+			height: 33.33%
+		.frame
+			&-3, &-4, &-9
+				display: none
+			&-text
+				padding-top: 5rem
+			p
+				font-size: 1.5rem
+			h3
+				font-size: 3rem
+	@media screen and (min-width: 1024px)
+		.frame			
+			&-text
+				padding-top: 7rem
+			h3, p
+				padding: 1rem 4rem 
+			h3
+				font-size: 3rem
+			p
+			 	font-size: 1.5rem 
+	@media screen and (min-width: 1440px)
+		.double
+			width: 50%
+		.single
+			width: 25%
+		.frame
+			&-3, &-4, &-9
+				display: block
+			&-text
+				padding-top: 8rem
+			h3, p
+				padding: 1rem 6rem
+			h3
+				font-size: 3rem
+			p
+				font-size: 1.5rem
+				

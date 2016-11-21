@@ -1,0 +1,51 @@
+.nav-wrapper
+	position: fixed
+	top: 1%
+	right: 2%
+	width: 50px
+	z-index: 50
+	transform: translateY(0px)
+	transition: transform 700ms ease-out
+	&.hide-up
+		transform: translateY(-100px)
+.menu
+	height: 100vh
+	width: 15.5%
+	background-color: rgba(21,100,164, 0.7)
+	top: 0
+	left: 100%
+	position: fixed
+	transition: all 300ms ease-in  
+	// z-index: 50
+	&.active
+		left: 84.5%
+
+	ul
+		list-style-type: none
+		padding: 1rem   
+		border-top: 1px solid #efefef
+		border-bottom: 1px solid #efefef
+		display: inline-block
+		position: relative
+		top: 10rem
+		left: 2.65em
+	a
+		font-family: 'Gotham Book' 
+		text-decoration: none
+		color: $white
+		text-transform: uppercase
+		line-height: 4rem
+		color: $white
+		text-align: left
+		font-size: 2rem
+		// text-shadow: -2.1px 2.1px 3px rgba(0, 0, 0, 0.3)
+		&:hover
+			color: $green
+			background-color: none 
+			
+
+// display: inline-block
+// position: relative
+// top: 2.9em
+// left: 2.65em
+// padding: 1rem 0

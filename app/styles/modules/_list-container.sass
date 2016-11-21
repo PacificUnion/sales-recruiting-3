@@ -1,0 +1,92 @@
+.list-container
+	position: relative
+	width: 100%
+	display: flex
+	// left: 50%
+	// margin-left: -80% 
+	// z-index: 50005
+	ul
+		text-align: left
+		font-family: 'Gotham Book'
+		color: #686868
+		list-style: none 
+		// list-style: circle url('../images/checkmark-bullet.png')
+		h3
+			font-family: 'Gotham Bold'
+			font-size: 20px
+			padding-left: 3rem
+			 
+		li
+			font-size: 16px
+			padding: 0.5rem 0
+			position: relative
+			opacity: 0
+						 
+			span
+				display: inline-block
+				width: 100%
+				padding-left: 3rem
+				 
+		img
+			width: 16px
+			height: 16px
+			margin-right: 1rem
+			position: absolute
+			top: 1rem
+							
+			
+	.left
+		width: 50%
+		left: 0
+		position: relative
+		vertical-align: middle;
+		&::before, &::after
+			border-right: 2px dashed transparent 
+			width: 0
+			height: 0
+			box-sizing: border-box
+			content: ''
+			position: absolute
+			
+		&::before
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		
+	.right
+		width: 50%
+		left: 50%
+		
+	&.active
+		.left
+			&::before, &::after
+				width: 100%
+				height: 100%
+			&::before
+				height: 100%
+				border-right-color: #a1a1a1
+				transition: height 0.5s ease-out 1.5s
+			&::after
+				transition: border-color 0s ease-out 0.5s
+			
+		h1, h3
+			opacity: 1
+			transform: scale(1)
+		li
+			@for $i from 1 through 9
+				&:nth-child(#{$i})
+					animation: 
+						name: list-drop 
+						delay: 1s
+						duration: 150ms * $i
+						timing-function: ease-in
+						fill-mode: forwards
+
+	@keyframes list-drop
+		0%
+			opacity: 0
+			transform: rotateY(-90deg) translateY(15px)
+		100%
+			opacity: 1
+			transform: rotateY(0deg) translateY(0px)

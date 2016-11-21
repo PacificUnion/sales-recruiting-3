@@ -1,0 +1,90 @@
+    
+.hoverable-border 
+    z-index: 7
+    position:absolute
+    border: 0rem solid transparent
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 0
+    height: 0
+    -webkit-transition: border-color 0.2s, border-width 0.2s, opacity 0.3s, visibility 0.3s
+    transition: border-color 0.2s, border-width 0.2s, opacity 0.3s, visibility 0.3s
+
+
+.hoverable-border-left 
+    right: auto
+    height: auto
+.hoverable-border-top 
+    bottom: auto
+    width: auto
+.hoverable-border-right 
+    left: auto
+    height:  auto
+.hoverable-border-bottom 
+    top: auto
+    width: auto
+
+
+.hoverable-border:hover
+    border-width: 1rem
+    border-color: rgba(0,0,0,0.2)
+    z-index: 10
+.hoverable-border-left:hover
+    border-left-color: rgba(0,0,0,0.2)
+
+.hoverable-border-top:hover
+    border-top-color: rgba(0,0,0,0.2)
+    border-left-width: 0
+    border-right-width: 0
+
+.hoverable-border-right:hover
+    border-right-color: rgba(0,0,0,0.2)
+
+.hoverable-border-bottom:hover
+    border-bottom-color: rgba(0,0,0,0.2)
+    border-left-width: 0
+    border-right-width: 0
+
+
+.hoverable-border-left ~ .hoverable-border-top,
+.hoverable-border-left ~ .hoverable-border-bottom 
+    border-left-width: 1rem
+
+
+.hoverable-border-right ~ .hoverable-border-top,
+.hoverable-border-right ~ .hoverable-border-bottom 
+    border-right-width: 1rem
+
+
+
+// .hoverable-border-hovered .hoverable-border 
+//     border-width: 1rem
+
+// .hoverable-border-hovered .hoverable-border-left
+//     border-left-color: rgba(0,0,0,0.2)
+
+// .hoverable-border-hovered .hoverable-border-top
+//     border-top-color:rgba(0,0,0,0.2)
+//     border-left-width:0
+//     border-right-width:0
+
+// .hoverable-border-hovered .hoverable-border-right
+//     border-right-color:rgba(0,0,0,0.2)
+
+// .hoverable-border-hovered .hoverable-border-bottom
+//     border-bottom-color:rgba(0,0,0,0.2)
+//     border-left-width:0
+//     border-right-width:0
+
+
+// .hoverable-border-hovered .hoverable-border-left ~ .hoverable-border-top,
+// .hoverable-border-hovered .hoverable-border-left ~ .hoverable-border-bottom 
+//     border-left-width:1rem
+
+
+// .hoverable-border-hovered .hoverable-border-right ~ .hoverable-border-top,
+// .hoverable-border-hovered .hoverable-border-right ~ .hoverable-border-bottom 
+//     border-right-width:1rem
+

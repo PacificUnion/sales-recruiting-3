@@ -1,0 +1,132 @@
+.map-wrapper
+	background: url(../images/gray-bg.png) 
+	background-position: center
+	background-size: cover 
+	background-repeat: no-repeat 
+	height: 100%
+	width: 75%
+	left: 25%
+	position: absolute
+	top: 0
+	opacity: 0
+	// padding-bottom: 56.25%
+	// padding-bottom: 90% 
+	overflow: hidden
+	transition: opacity 300ms ease-in
+	&.active
+		opacity: 1
+		.pin
+			@for $i from 1 through 4
+				&:nth-child(#{$i})
+					animation: 
+						name: ping
+						duration: 500ms
+						delay: (150ms * $i)
+						timing-function: ease-in-out
+						fill-mode: forwards
+				// transform: translate(0px, 0px) scale(1)
+	.map-usa
+		background: url(../images/map-us.png)
+		background-size: 80%
+		background-position: center
+		background-repeat: no-repeat 
+		position: absolute 
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		padding-bottom: 63.32%
+	.map-text
+		color: $white
+		font-family: 'Gotham Book'
+		top: 10% 
+		position: absolute
+		width: 70%
+		margin-left: 15%
+		line-height: 3rem
+	.pin-container
+		position: absolute
+		top: 50%
+		width: 80%
+		margin-left: 10%
+		margin-top: -31.66%
+		padding-bottom: 63.32%
+	.pin
+		width: 35px
+		height: 40px
+		z-index: 2 
+		position: absolute
+		transition: all 300ms ease-in 300ms
+		transform: translate(0px, -30px) scale(0)
+		&-1
+			top: 43%
+			left: 14.5%
+			.tooltip
+				left: -11%
+		&-2
+			top: 61%
+			left: 49%
+			.tooltip
+				left: -25%
+		&-3
+			top: 43.5%
+			left: 82%
+			.tooltip
+				left: -25%
+				top: -90%
+		&-4
+			top: 49%
+			left: 80%
+			.tooltip
+				left: -25%
+			
+		.tooltip
+			position: absolute
+			opacity: 0
+			color: $white
+			font-family: "Gotham Book"
+			font-size: 1rem
+			text-align: center
+			transform: scale(0)  
+			transition: all 300ms ease-in
+		&:hover
+			.tooltip
+				opacity: 1
+				transform: scale(1)
+	.legend
+		width: 35px
+		height: 40px
+		z-index: 2 
+		position: absolute
+		top: 85%
+		&-text
+			font-family: 'Gotham Book'  
+			color: $white
+			left: 50%
+			display: flex
+			width: 20%
+			height: auto
+			img
+				width: 26px
+				height: 35px
+			
+		&-color
+			font-family: 'Gotham Book'  
+			color: $white
+			left: 70%
+			display: flex
+			width: 20%
+			height: auto
+			img
+				width: 24px
+				height: 21px
+		span
+			margin-left: 2rem
+			text-align: left
+				
+			
+@keyframes ping
+	0%
+		transform: translate(0px, -30px) scale(0.3)
+	100%
+		transform: translate(0px, 0px) scale(1)

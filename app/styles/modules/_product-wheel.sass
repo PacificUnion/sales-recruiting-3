@@ -1,0 +1,111 @@
+.product-wheel
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+		
+	.wheel
+		// top: 40%
+		top: 52% 
+		left: 32.5%
+		margin-left: -125px
+		position: absolute
+		z-index: 10 
+		animation: spin 5s linear infinite
+		// width: 250px
+	.shadow
+		margin-left: -225px
+		position: absolute
+		left: 32.5%
+		// top: 29.5%
+		top: 52%
+		z-index: 1
+		// width: 450px
+		
+	.inside-content
+		position: absolute
+		text-align: center
+		text-transform: uppercase
+		color: $blue
+		font-family: 'Gotham Bold'
+		letter-spacing: 1px  
+		z-index: 11
+		left: 32.5%
+		margin-left: -50%
+		top: 51%
+		// font-size: 2rem
+		// width: 100%
+		
+	.dots-branches
+		position: absolute
+		margin-left: -425px
+		z-index: 2
+		left: 32.5%
+		// top: 6.5%
+		top: 52%
+		// height: 850px
+	
+	.bg-ring
+		position: absolute
+		left: -9%
+		top: 52%
+		left: 32.5%
+		margin-left: -400px  
+		z-index: 0
+		animation: full-spin 20s linear infinite
+		// width: 800px
+
+	.dot
+		position: absolute
+		z-index: 500
+		height: auto
+		animation: pulse 2s linear infinite
+		animation-play-state: paused
+		cursor: pointer
+		// width: 30px
+		&:hover
+			animation-play-state: running
+		&-flexkey
+			top: 5%
+			left: 19.6%
+		&-fha
+			top: 20.4%
+			left: 63.6%
+		&-va
+			top: 55.4%
+			left: 75.3%
+		&-conv
+			top: 94%
+			left: 58.5%
+		&-usda
+			top: 86%
+			left: -10.5%
+		&-jumbo
+			top: 34.2%
+			left: -10.1%
+			
+
+@keyframes spin
+	0%
+		transform: rotate(0deg) //scale(1)
+	50%
+		transform: rotate(45deg) //scale(1.1)
+	100%
+		transform: rotate(0deg) //scale(1)
+
+
+@keyframes full-spin
+	0%
+		transform:  rotate(0deg)
+	100%
+		transform:  rotate(360deg)
+		
+@keyframes pulse
+	0%
+		transform: 	scale(1)
+	50%
+		transform: 	scale(1.1)
+	100%
+		transform: 	scale(1)
+		

@@ -1,0 +1,28 @@
+.arrow
+	border: 1px solid
+	border-color: transparent transparent #f1f2f2 #f1f2f2
+	width: 3rem
+	height: 3rem
+	transform-origin: 0% 100%
+	transform: rotate(-45deg) skew(7deg, 7deg)
+	cursor: pointer
+	&::after
+		content: ''
+		position: absolute
+		display: block
+		width: 100%
+		height: 100%
+		border: 1px solid
+		border-color: inherit
+		transform: translate(25%, -27%)
+	&::before
+	    content: ''
+	    position: absolute
+	    display: block
+	    width: 180%
+	    height: 180%
+	    transform: translate(-19%, -25%) 
+.next
+	transform: rotate(-135deg) skew(7deg, 7deg)
+.prev
+	transform: rotate(45deg) skew(7deg, 7deg)

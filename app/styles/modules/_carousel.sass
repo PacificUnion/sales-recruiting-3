@@ -1,0 +1,48 @@
+// with bootstrap carousel js and sass
+
+.carousel
+	
+	&-control
+		&.left, &.right
+			background-image: none 
+		.next
+			position: absolute
+			top: 30%
+			left: 80%
+			width: 4rem
+			height: 4rem
+		.prev
+			position: absolute
+			top: 30%
+			left: 20%
+			width: 4rem
+			height: 4rem
+	.item
+		height: 32rem
+		img
+			width: 17rem
+			height: auto
+			margin: auto
+		h3
+			color: $white
+			font-family: 'Gotham Bold' 
+			font-size: 1.5rem
+		p
+			color: $white
+			font-family: 'Gotham Book Italic'
+			width: 70%
+			margin-left: 15%
+		
+	&-fade
+		.carousel-inner
+			.item
+				opacity: 0
+				transition-property: opacity
+				&.active
+					opacity: 1
+	&-indicators 
+  		top: 100%
+  		bottom: auto
+  		position: absolute
+  		
+	
