@@ -1,15 +1,16 @@
-.nav-local
+.nav
 	position: fixed
 	color: $green
 	z-index: 50
 	display: block
 	right: 2% 
 	top: 0
-	width: 50%
+	// width: 50%
 	padding-top: 2%
 	opacity: 1
 	// transform: translateY(0px)
 	transition: opacity 300ms ease-in, all 300ms ease-in
+	display: none
 	ul
 		width: 100%
 		li, a
@@ -26,11 +27,32 @@
 	&.hide-up
 		opacity: 0
 		transform: translateY(-100px)
-
-
-	display: none
 	
+
+	li:hover > ul.drop-down
+		perspective: 1000px
+	
+		li
+			opacity: 0
+			@for $i from 1 through 6
+				&:nth-child(#{$i})
+					animation: 
+						name: drop-down
+						duration: 300ms
+						delay: 150ms * $i
+						timing-function: ease-in
+						fill-mode: forwards 
+						
+	@keyframes drop-down
+		0%
+			opacity: 0
+			transform: rotateY(-90deg) translateY(30px)
+		100%
+			opacity: 1
+			transform: rotateY(0deg) translateY(0px)
+	
+
 @media screen and (min-width: 1024px)
-	.nav-local
+	.nav
 		display: block
 			

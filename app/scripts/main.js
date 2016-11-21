@@ -8,7 +8,7 @@ $(function() {
             //Navigation
             menu: false,
             lockAnchors: false,
-            anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            anchors: ['Home', 'Operations', 'Technology', 'Marketing', 'Servicing', 'Ready'],
             navigation: false,
             navigationPosition: 'left',
             navigationTooltips: [],
@@ -149,10 +149,11 @@ $(function() {
                     $('.form-contact').removeClass('active');
                 });
 
-                $('#sec-4 .play, #sec-4 .video-overlay').click(function(){
+                $('#sec-4 .play, #sec-4 .close-video').click(function(){
                     $('#video-sec-4').toggleClass('active');
-
                 });
+                
+
 
             }
       
