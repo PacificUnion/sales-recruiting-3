@@ -1,47 +1,48 @@
 .fifth-sec
-	background-image: url(../images/are-you-ready-bg.jpg) 
-	background-repeat: no-repeat
-	background-size: cover 
-	background-position: top
-	
-	.carousel
+	.left-block
 		position: absolute
-		width: 70%
-		top: 10%
-	
-	.badges
-		width: 80%
-		left: 10%
-		position: relative
-		display: flex
-		justify-content: center
-		top: 4%
-		.badge
-			margin: 0 2rem
-			width: 9rem
-	
-	.button
-		text-transform: uppercase
-		text-align: center
-		background-color: $blue
-		border: transparent 1px solid
-		padding: 1.5rem
-		color: $white
-		width: 20%
-		font-family: 'Gotham Bold'
+		width: 50%
+		height: 100%
+		left: 0
+		top: 0
+	.right-block
 		position: absolute
-		top: 62%
+		width: 50%
+		height: 100%
 		left: 50%
-		margin-left: -10%
-		cursor: pointer
-		transition: all 300ms ease-in
-		&:hover
-			background-color: rgba(0,0,0,0.3)
-			border: $white 1px solid
-		
-	footer
+		top: 0
+	.top-block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 50%
+	.bottom-block
+		position: absolute
 		bottom: 0
 		left: 0
-		right: 0
+		width: 100%
+		height: 50%
+	.text-content
 		position: absolute
+		width: 50%
+		height: 100%
+		margin-left: 25%
+		left: 0
+		top: 0
+		margin-top: 15%
+		text-align: left
+		h2
+			font-family: 'Droid Serif Bold'
+			color: $text-gray 
 		
+	.img
+		position: absolute
+		background-size: cover
+		background-repeat: no-repeat 
+		width: 100%
+		height: 50%
+		&-1
+			background-image: url(http://placekitten.com/600/500) 
+		&-2
+			background-image: url(http://placekitten.com/600/501) 

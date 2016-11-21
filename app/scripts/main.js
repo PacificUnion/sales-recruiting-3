@@ -131,31 +131,6 @@ $(function() {
               
                 $('video').get(0).play();
 
-                $('.block-1').click(function(){
-                    $('.block-1').addClass('active'),
-                    $('.block-2').removeClass('active'),
-                    $('.block-3').removeClass('active'),
-                    $('.map-wrapper').addClass('active'),
-                    $('.achievements-wrapper').removeClass('active'),
-                    $('.graph-wrapper').removeClass('active');
-                });
-                $('.block-2').click(function(){
-                    $('.block-2').addClass('active'),
-                    $('.block-1').removeClass('active'),
-                    $('.block-3').removeClass('active'),
-                    $('.map-wrapper').removeClass('active'),
-                    $('.achievements-wrapper').removeClass('active'),
-                    $('.graph-wrapper').addClass('active');
-
-                });
-                $('.block-3').click(function(){
-                    $('.block-3').addClass('active'),
-                    $('.block-2').removeClass('active'),
-                    $('.block-1').removeClass('active'),
-                    $('.map-wrapper').removeClass('active'),
-                    $('.graph-wrapper').removeClass('active'),
-                    $('.achievements-wrapper').addClass('active');
-                });
 
                 $('.video-frame-1, #video-testimonial-1 ').click(function(){
                     $('#video-testimonial-1').toggleClass('active');
@@ -172,6 +147,11 @@ $(function() {
                 });
                 $('.form-contact .close').click(function(){
                     $('.form-contact').removeClass('active');
+                });
+
+                $('#sec-4 .play, #sec-4 .video-overlay').click(function(){
+                    $('#video-sec-4').toggleClass('active');
+
                 });
 
             }
