@@ -50,7 +50,7 @@ $(function() {
             controlArrows: true,
             verticalCentered: true,
            
-            fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
+            fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper',
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
