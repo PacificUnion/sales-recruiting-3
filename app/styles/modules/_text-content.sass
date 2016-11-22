@@ -1,8 +1,35 @@
+h1
+	font-family: 'Droid Serif Bold', serif
+	font-size: 2rem 
+	
+h2, h3, h4,
+	font-family: 'Gotham Bold'
+	font-size: 2rem
+	color: $text-gray
+	text-align: left
+	
 .text-content
-	h1, h2, h3, h4,
+	h1
 		font-family: 'Droid Serif Bold', serif
-		
+		font-size: 2rem
+	h2, h3, h4,
+		font-family: 'Gotham Bold'
+		font-size: 1.7rem
+		color: $text-gray
+		text-align: left
 	p
-		font-family: 'Gotham Book'
-		line-height: 3rem 
+	 	font-family: 'Gotham Book'
+	 	font-size: 1.5rem
+	 	color: $text-gray
+	 	text-align: left
+	 	line-height: 1.7rem 
+		 
+@media screen and (min-width: 768px)
+	.text-content
+		h1, h2, h3, h4,
+			font-family: 'Droid Serif Bold', serif
+			
+		p
+			font-family: 'Gotham Book'
+			line-height: 3rem 
 		 

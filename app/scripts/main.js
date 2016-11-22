@@ -53,7 +53,7 @@ $(function() {
             fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper',
             responsiveWidth: 0,
             responsiveHeight: 0,
-            responsiveSlides: false,
+            responsiveSlides: true,
 
             //Custom selectors
             sectionSelector: '.section',
@@ -160,6 +160,6 @@ $(function() {
         	// scrollOverflow: true,
         	// normalScrollElements: '.history-block'
         });
-    //} //end of mobile check
+    // } //end of mobile check
 });
 
