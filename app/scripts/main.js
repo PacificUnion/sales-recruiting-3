@@ -1,7 +1,7 @@
 $(function() {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log('mobile phone')
-    }else{
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //     console.log('mobile phone')
+    // }else{
 
         $('#fullpage').fullpage({
 
@@ -160,6 +160,6 @@ $(function() {
         	// scrollOverflow: true,
         	// normalScrollElements: '.history-block'
         });
-    } 
+    //} //end of mobile check
 });
 
