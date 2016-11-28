@@ -51,7 +51,7 @@ $(function() {
             verticalCentered: true,
            
             fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper',
-            responsiveWidth: 0,
+            responsiveWidth: 768,
             responsiveHeight: 0,
             responsiveSlides: true,
 
