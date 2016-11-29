@@ -1,6 +1,6 @@
 nav
 	display: none
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 768px)
 	nav
 		padding: 1rem
 		text-align: center
@@ -26,6 +26,7 @@ nav
 			a
 				// text-decoration: none 
 				color: $white
+				text-shadow: 2px 2px 4px $text-gray
 			&:hover
 				background-color: $blue
 				border-radius: 5px 5px 0 0
@@ -47,7 +48,9 @@ nav
 					a
 						color: $white
 			.current
-				color: $green
+				// color: rgba(255,255,255,1)
+				// text-decoration: underline 
+				color: $blue
 				
 			
 	ul.drop-down li
