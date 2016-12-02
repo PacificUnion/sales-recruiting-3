@@ -88,6 +88,34 @@
 		&:hover
 			background-color: rgba(0,0,0,0.3)
 		
+	.close
+		left: 2%
+		top: 0
+		width: 30px
+		height: 25px
+		position: relative
+		margin: 25px auto
+		// transition: .5s ease-in-out 300ms
+		cursor: pointer
+		float: left
+		span
+			display: block
+			position: absolute
+			height: 4px
+			width: 100%
+			background: #ffffff
+			border-radius: 9px
+			left: 0
+			transition: all .25s ease-in-out 
+			transform: rotate(0deg)
+
+		span:nth-child(1) 
+		    top: 0px
+		    transform-origin: center
+		    
+		span:nth-child(2) 
+		    top: 0px
+		    transform-origin: center
 	&.active
 		right: 0
 		.close
@@ -99,35 +127,6 @@
 			    transform: rotate(-45deg)
 			    top: 10px
 			    left: 0
-	.close
-		left: 2%
-		top: 0
-		width: 30px
-		height: 25px
-		position: relative
-		margin: 25px auto
-		transform: rotate(0deg)
-		transition: .5s ease-in-out 300ms
-		cursor: pointer
-		float: left
-		span
-			display: block
-			position: absolute
-			height: 4px
-			width: 100%
-			background: #ffffff
-			border-radius: 9px
-			left: 0
-			transition: .25s ease-in-out 300ms
-			transform: rotate(0deg)
-
-		span:nth-child(1) 
-		    top: 0px
-		    transform-origin: center
-		    
-		span:nth-child(2) 
-		    top: 0px
-		    transform-origin: center
 	&.success
 		.form-container
 			opacity: 0
