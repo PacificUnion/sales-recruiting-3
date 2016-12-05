@@ -104,12 +104,7 @@ $(function() {
 
             },
 
-            // $.preloadImages = function() {
-            //     for (var i = 0; i < arguments.length; i++) {
-            //         $("<img />").attr("src", arguments[i]);
-            //     }
-            // }
-            // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
+           
             afterLoad: function(anchorLink, index){
                 if(index == 1 || index >= 11){
                
