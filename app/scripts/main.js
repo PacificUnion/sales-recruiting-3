@@ -1,7 +1,24 @@
 $(function() {
-    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    //     console.log('mobile phone')
-    // }else{
+        
+        // preloader
+        $(window).on('load', function(){
+            $('.spinner_hol').fadeIn('fast');
+            $('.spinner svg').css('visibility', 'visible');
+
+            function animate() {
+                TweenMax.set('.house-icon-line', {drawSVG: 0});
+                TweenMax.to('.house-icon-line', 3, {drawSVG: true});
+                TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
+            }
+
+            animate();
+            setTimeout(function(){
+                $('.spinner_hol').fadeOut('slow', function(){
+                    $('.spinner svg').css('visibility', 'hidden');
+                    
+                });
+            }, 2000);
+        });
 
         $('#fullpage').fullpage({
 
