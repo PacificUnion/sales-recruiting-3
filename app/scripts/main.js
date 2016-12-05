@@ -130,8 +130,10 @@ $(function() {
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active');
                 }
-                if(index == 4){
-              
+                if(index == 1){
+                    $('nav .nav-title a').css('text-shadow', 'none');
+                }else{
+                    $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
                 }
                
             },
