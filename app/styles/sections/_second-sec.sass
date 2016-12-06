@@ -32,8 +32,19 @@
 		color: $text-gray
 		li
 			span
-				font-family: 'Gotham Bold' 
+				font-family: 'Gotham Bold'
+				
+		ul
+			opacity: 0
+			transform: translate(-20px, 0)
+			transition: all 300ms ease-in 0.7s
 	
+	&.active
+		.text-content
+			ul
+				transform: translate(0,0)
+				opacity: 1
+		
 	.arrow
 		position: absolute
 		top: 90%
