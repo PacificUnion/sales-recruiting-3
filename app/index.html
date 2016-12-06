@@ -273,6 +273,7 @@
                     <img src="./images/SVGs/Government-Lender.svg" alt="" class="badge">
                     <img src="./images/SVGs/Google-Rating.svg" alt="" class="badge">
                     <img src="./images/SVGs/Glassdoor-Rating.svg" alt="" class="badge">
+                    <img src="./images/SVGs/top-5-fha.svg" alt="" class="badge">
                     <img src="./images/SVGs/Mortgage-Lender.svg" alt="" class="badge">
                 </div>
                 <div class="button" id="contact-button">Get in touch today</div>
@@ -398,7 +399,7 @@
                 <input type="text" id="last_name" name="last_name" value=""  required  placeholder="Last Name">
                 <input type="email" id="email" name="email" value="" required  placeholder="Email Address">
                 <input type="text" id="phone" name="phone" value=""  required placeholder="Phone Number">
-                <input type="text" id="address" name="address" value="" placeholder="Home Address">
+                <input type="text" id="address" name="address" value="" placeholder="Home Address (optional)">
                 <input type="text" id="city" name="city" value=""  required  placeholder="City">
                 <select id="states" name="state" required placeholder="State">
                     <option value="" disabled selected>State</option>
@@ -466,6 +467,40 @@
 
   </div> <!--  end fullpage  -->
 
+    <script>
+        function submitForm() {
+            var form = $('#recruiting-site-form');
+            var formData = $(form).serialize();
+
+            if ($('#recruiting-site-form')[0].checkValidity()) {
+                // document.getElementById('form-submit').setAttribute('disabled', 'true');
+                $.ajax({
+                    type: 'POST',
+                    url: '../../assets/php-email-services/recruiting-site-email-service.php',
+                    data: formData
+                })
+                    .done(function(response) {
+                        $('#recruiting-site-form')[0].reset();
+                        // Make sure that the formMessages div has the 'success' class.
+
+                        setTimeout(function() {
+                            $('.form-contact').addClass('success');
+                            document.getElementById('form-submit').disabled = false;
+                        }, 500);
+                    })
+                    .fail(function(data) {
+                        // Make sure that the formMessages div has the 'error' class.
+                    });
+            } else {
+                $('#recruiting-site-form :input:visible[required="required"]').each(function() {
+                    if (!this.validity.valid) {
+                        $(this).focus();
+                        return false;
+                    }
+                })
+            }
+        }
+    </script>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
