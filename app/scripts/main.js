@@ -158,7 +158,7 @@ $(function() {
                     $('#video-testimonial-3').toggleClass('active');
                 });
 
-                $('#contact-us').click(function(){
+                $('#contact-button').click(function(){
                     $('.form-contact').addClass('active');
                 });
                 $('.form-contact .close').click(function(){
