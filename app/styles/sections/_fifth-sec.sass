@@ -1,4 +1,5 @@
 .fifth-sec
+	margin-bottom: 85% 
 	.left-block
 		position: absolute
 		width: 100%
@@ -13,13 +14,14 @@
 		top: 50%
 	.top-block
 		position: absolute
-		top: 0
+		top: 45%
 		left: 0
 		width: 100%
 		height: 100%
 	.bottom-block
 		position: absolute
-		bottom: 0
+		top: 100%
+		// bottom: 0
 		left: 0
 		width: 100%
 		height: 100%
@@ -30,8 +32,10 @@
 		margin-left: 10%
 		left: 0
 		top: 0
-		margin-top: 15%
+		// margin-top: 15%
 		text-align: left
+		&.servicing
+			margin-top: 15%
 		h2
 			font-family: 'Droid Serif Bold'
 			color: $text-gray 
@@ -43,13 +47,18 @@
 		background-position: center 
 		width: 100%
 		height: 50%
-		display: none
+		// display: none
 		&-1
-			background-image: url(../images/customer-service.jpg) 
+			background-image: url(../images/customer-service.jpg)
+			top: 0 
 		&-2
-			background-image: url(../images/servicing.jpg) 
+			background-image: url(../images/servicing.jpg)
+	.arrow
+		bottom: -40%
+		
 @media screen and (min-width: 768px)
 	.fifth-sec
+		margin-bottom: 0
 		.left-block
 			position: absolute
 			width: 50%
@@ -70,7 +79,7 @@
 			height: 50%
 		.bottom-block
 			position: absolute
-			bottom: 0
+			top: 50%
 			left: 0
 			width: 100%
 			height: 50%
@@ -86,6 +95,20 @@
 			h2
 				font-size: 3rem
 			
-		.img			
-			display: block
 			
+		.img			
+			position: absolute
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center 
+			width: 100%
+			height: 50%
+			&-1
+				background-image: url(../images/customer-service.jpg)
+				top: 50%
+			&-2
+				background-image: url(../images/servicing.jpg)
+		
+		.arrow
+			bottom: 5%
+	
