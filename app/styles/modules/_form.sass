@@ -8,8 +8,9 @@
 	transition: all 700ms ease-in
 	z-index: 5000
 	.form-container
-		transition: opacity 300ms ease-out 
+		transition: opacity 300ms ease-out, display 150ms ease 300ms
 		opacity: 1
+		display: block
 	.thank-you
 		transition: opacity 300ms ease-in 300ms
 		width: 100%
@@ -20,21 +21,33 @@
 		text-align: center
 		opacity: 0
 		z-index: -1
-		.funny-font
+		.content
+			width: 50%
+			height: 50%
+			left: 50%
+			top: 50%
+			margin-left: -25%
+			margin-top: -25%
 			position: absolute
-			color: $white
-			font-family: 'Jenna Sue' 
-			font-size: 3rem 
-			width: 100%
-			padding-top: 55%
-		.text
-			color: $white
-			font-family: 'Gotham Book' 
-			width: 100%
-			position: absolute
-			padding-top: 51%
-			text-align: center
-			margin: 0
+			.funny-font
+				position: absolute
+				color: $white
+				font-family: 'Jenna Sue' 
+				font-size: 3rem 
+				width: 100%
+				margin-top: 40%
+				text-align: center 
+				// padding-top: 55%
+				// transform: translate(-50%, -50%)
+			.text
+				position: absolute
+				color: $white
+				font-family: 'Gotham Book' 
+				width: 100%
+				margin-top: 50% 
+				text-align: center
+				transform: none
+				
 	h4
 		color: $white
 		font-family: 'Gotham Bold'
@@ -136,6 +149,7 @@
 	&.success
 		.form-container
 			opacity: 0
+			display: none
 		.thank-you
 			opacity: 1
 			z-index: 1 
