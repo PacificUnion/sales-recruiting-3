@@ -1,5 +1,5 @@
 .second-sec
-	margin-bottom: 200%
+	margin-bottom: 620px
 	.img-block
 		position: absolute
 		// height: 30%
@@ -26,10 +26,11 @@
 		height: 100%
 		left: 10%
 		top: 65%
-		text-align: center
+		text-align: left
 		// transform: translate(-50%, -50%)	
 		font-family: 'Gotham Book' 
 		color: $text-gray
+		margin-top: 20px
 		li
 			span
 				font-family: 'Gotham Bold'
@@ -48,10 +49,15 @@
 		
 	.arrow
 		position: absolute
-		bottom: -105% 
+		bottom: -600px
 		left: 50%
 		border-color: transparent transparent $text-gray $text-gray
-	
+		
+@media screen and (min-width: 321px)
+	.second-sec
+		margin-bottom: 520px
+		.arrow
+			bottom:	-495px	
 
 @media screen and (min-width: 768px)
 	.second-sec
