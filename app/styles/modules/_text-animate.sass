@@ -1,11 +1,14 @@
-.text-animate
-	p, h1, h2, h3, h4
-		opacity: 0
-		transform: translate(20px, 0px)
-		transition: all 300ms ease-in 700ms
-	
-.active
+
+
+@media screen and (min-width: 768px)
 	.text-animate
 		p, h1, h2, h3, h4
-			opacity: 1
-			transform: translate(0px, 0px)
+			opacity: 0
+			transform: translate(20px, 0px)
+			transition: all 300ms ease-in 700ms
+		
+	.active
+		.text-animate
+			p, h1, h2, h3, h4
+				opacity: 1
+				transform: translate(0px, 0px)

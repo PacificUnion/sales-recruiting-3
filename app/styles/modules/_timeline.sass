@@ -4,7 +4,7 @@
 	z-index: -2
 	height: 100%
 	// left: 0
-	stroke-dasharray: 1000
+	stroke-dasharray: 0
 	stroke-dashoffset: 1000
 	animation-iteration-count: 1
 	transition: stroke-dashoffset 1.5s ease-in
@@ -41,14 +41,14 @@
 	stroke: $green
 	stroke-width: 4
 	fill: none
-	stroke-dasharray: 1000
+	stroke-dasharray: 0
 	stroke-dashoffset: 1000
-	transition: stroke-dashoffset 1.5s ease-in 0.7s
+	// transition: stroke-dashoffset 1.5s ease-in 0.7s
 
-p, h1, .text-content ul, h3
-	opacity: 0
-	transform: translate(-20px, 0)
-	transition: all 300ms ease-in 0.7s
+// p, h1, .text-content ul, h3
+// 	opacity: 0
+// 	transform: translate(-20px, 0)
+// 	transition: all 300ms ease-in 0.7s
 
 
 h1
@@ -61,17 +61,15 @@ p
 	// color: $dark-gray
 	color: #686868
 	font-size: 16px
-h3
-	opacity: 0	 
 
 .section	
 	&.active
 		.line, .circle, .divider
 			stroke-dashoffset: 0
 			stroke-dasharray: 1000
-		p, h1, h3, ul
-			transform: translate(0,0)
-			opacity: 1
+		// p, h1, h3, ul
+		// 	transform: translate(0,0)
+		// 	opacity: 1
 		.date
 			transform: translate(0,-1px)
 
@@ -80,3 +78,32 @@ h3
 	float: left
 	width: 33%
 	left: 8.5%	
+
+@media screen and (min-width: 768px)
+	
+	p, h1, .text-content ul, h3
+		opacity: 0
+		transform: translate(-20px, 0)
+		transition: all 300ms ease-in 0.7s
+
+	.line
+		stroke-dashoffset: 1000
+	.section	
+		&.active
+			.line, .circle, .divider
+				stroke-dashoffset: 0
+				stroke-dasharray: 1000
+			p, h1, h3, ul
+				transform: translate(0,0)
+				opacity: 1
+			.date
+				transform: translate(0,-1px)
+	
+		
+	.divider
+		stroke: $green
+		stroke-width: 4
+		fill: none
+		stroke-dasharray: 0
+		stroke-dashoffset: 1000
+		transition: stroke-dashoffset 1.5s ease-in 0.7s

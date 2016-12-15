@@ -36,17 +36,7 @@
 				font-family: 'Gotham Bold'
 				
 		ul
-			opacity: 0
-			transform: translate(-20px, 0)
-			transition: all 300ms ease-in 0.7s
 			text-align: left
-	
-	&.active
-		.text-content
-			ul
-				transform: translate(0,0)
-				opacity: 1
-		
 	.arrow
 		position: absolute
 		bottom: -600px
@@ -58,11 +48,11 @@
 		margin-bottom: 122%
 		.arrow
 			bottom:	-61%
-@media screen and (min-width: 361px)
+@media screen and (min-width: 360px)
 	.second-sec
 		margin-bottom: 145%
 		.arrow
-			bottom:	-89%
+			bottom:	-78%
 @media screen and (min-width: 376px)
 	.second-sec
 		margin-bottom: 99%
@@ -93,9 +83,19 @@
 			top: 50%
 			text-align: left
 			transform: translate(-50%, -50%)
+			ul
+				opacity: 0
+				transform: translate(-20px, 0)
+				transition: all 300ms ease-in 0.7s
+				text-align: left
 			 
 			h1
 				font-size: 3rem
+		&.active
+			.text-content
+				ul
+					transform: translate(0,0)
+					opacity: 1
 		.arrow
 			position: absolute
 			top: 90%
