@@ -1,5 +1,5 @@
 .fifth-sec
-	margin-bottom: 85% 
+	margin-bottom: 69% 
 	.left-block
 		position: absolute
 		width: 100%
@@ -35,7 +35,7 @@
 		// margin-top: 15%
 		text-align: left
 		&.servicing
-			margin-top: 15%
+			margin-top: 5%
 		h2
 			font-family: 'Droid Serif Bold'
 			color: $text-gray 
@@ -49,12 +49,12 @@
 		height: 50%
 		// display: none
 		&-1
-			background-image: url(../images/customer-service.jpg)
+			background-image: url(../images/customer-service-mobile.jpg)
 			top: 0 
 		&-2
-			background-image: url(../images/servicing.jpg)
+			background-image: url(../images/servicing-mobile.jpg)
 	.arrow
-		bottom: -38%
+		bottom: -42%
 		
 @media screen and (min-width: 321px)
 	.fifth-sec
@@ -64,6 +64,13 @@
 @media screen and (min-width: 360px) //galaxy s5
 	.fifth-sec
 		margin-bottom: 60%
+		.arrow
+@media screen and (min-width: 414px) //iphone 6 plus
+	.fifth-sec
+		margin-bottom: 57%
+		.arrow
+			bottom: -33% 
+			
 @media screen and (min-width: 768px)
 	.fifth-sec
 		margin-bottom: 0
@@ -102,7 +109,8 @@
 			text-align: left
 			h2
 				font-size: 3rem
-			
+			&.servicing
+				margin-top: 10%
 			
 		.img			
 			position: absolute
@@ -124,7 +132,7 @@
 @media screen and (max-height: 900px) and (min-width: 768px)
 	.fifth-sec
 		.text-content
-			margin-top: 5%
+			margin-top: 10%
 			width: 70%
 			margin-left: 15%
 			p
@@ -135,5 +143,5 @@
 				font-size: 2.5rem
 				margin-bottom: 0
 			&.servicing
-				margin-top: 2%
+				margin-top: 5%
 			
