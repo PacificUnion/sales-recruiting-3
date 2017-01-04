@@ -19,6 +19,18 @@ $(window).on('load', function(){
 });
 
 $(function() {
+    // ios8 test
+    var isIOS8 = function() {
+      var deviceAgent = navigator.userAgent.toLowerCase();
+      return /(iphone|ipod|ipad).* os 8_/.test(deviceAgent);
+    }
+
+    if( isIOS8() == true ){
+        $('.spinner_hol').css('display', 'none');
+    }
+});
+
+$(function() {
 
         $('#fullpage').fullpage({
 
