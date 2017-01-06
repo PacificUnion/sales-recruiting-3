@@ -1,11 +1,9 @@
 .second-sec
-	margin-bottom: 650px
 	.img-block
-		position: absolute
-		// height: 30%
+		position: relative
 		width: 100%
-		top: 10%
 		left: 0
+		margin-top: 40px
 		
 		img
 			width: 80%
@@ -21,16 +19,13 @@
 			cursor: pointer
 	
 	.text-content
-		position: absolute
-		width: 85%
-		height: 100%
-		left: 10%
-		top: 65%
+		position: relative
+		width: 100%
 		text-align: left
-		// transform: translate(-50%, -50%)	
 		font-family: 'Gotham Book' 
 		color: $text-gray
 		margin-top: 20px
+		margin-bottom: 70px 
 		li
 			span
 				font-family: 'Gotham Bold'
@@ -39,30 +34,9 @@
 			text-align: left
 	.arrow
 		position: absolute
-		bottom: -640px
+		top: 97%
 		left: 50%
 		border-color: transparent transparent $text-gray $text-gray
-		
-@media screen and (min-width: 321px)
-	.second-sec
-		margin-bottom: 122%
-		.arrow
-			bottom:	-61%
-@media screen and (min-width: 360px) //galaxy S5
-	.second-sec
-		margin-bottom: 145%
-		.arrow
-			bottom:	-92%
-@media screen and (min-width: 375px) //iphone 6
-	.second-sec
-		margin-bottom: 145%
-		.arrow
-			bottom:	-93%
-@media screen and (min-width: 414px) //iphone 6 plus
-	.second-sec
-		margin-bottom: 99%
-		.arrow
-			bottom:	-65%
 
 @media screen and (min-width: 768px)
 	.second-sec
@@ -71,6 +45,8 @@
 			position: absolute
 			height: 100%
 			width: 50%
+			top: 0
+			
 			img
 				position: absolute
 				height: 60%

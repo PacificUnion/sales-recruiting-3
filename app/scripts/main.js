@@ -15,7 +15,7 @@ $(window).on('load', function(){
             $('.spinner svg').css('visibility', 'hidden');
             
         });
-    }, 2000);
+    }, 1000);
 });
 
 $(function() {
@@ -82,7 +82,7 @@ $(function() {
             fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper',
             responsiveWidth: 768,
             responsiveHeight: 0,
-            responsiveSlides: true,
+            responsiveSlides: false,
 
             //Custom selectors
             sectionSelector: '.section',

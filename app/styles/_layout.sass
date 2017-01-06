@@ -16,11 +16,12 @@ body
 
 .section
 	width: 100%
-	padding: 0 15%
+	padding: 0 10%
 	text-align: center
 	
 	.row
 		margin: 0
+		
 	
 	// overflow: hidden
 // .parallaxParent 
@@ -49,6 +50,10 @@ nav
 
 .desktop
 	display: none
+@media screen and (max-width: 768px)
+	.section
+		.row
+			padding-left: 5%
 
 @media screen and (min-width: 768px)
 	.mobile
@@ -75,6 +80,7 @@ nav
 		width: 100%
 		padding: 0 15%
 		text-align: center
+		
 	.text-content
 		h1
 			font-size: 3rem

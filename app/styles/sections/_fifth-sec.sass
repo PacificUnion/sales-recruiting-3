@@ -1,76 +1,51 @@
 .fifth-sec
-	margin-bottom: 69% 
 	.left-block
-		position: absolute
+		position: relative
 		width: 100%
-		height: 50%
 		left: 0
 		top: 0
 	.right-block
-		position: absolute
+		position: relative
 		width: 100%
-		height: 50%
 		left: 0
-		top: 50%
 	.top-block
-		position: absolute
-		top: 45%
+		position: relative
 		left: 0
 		width: 100%
-		height: 100%
+		.text-content
+			margin-bottom: 90px
 	.bottom-block
-		position: absolute
-		top: 100%
-		// bottom: 0
+		position: relative
 		left: 0
 		width: 100%
-		height: 100%
+		
 	.text-content
-		position: absolute
-		width: 85%
-		height: 100%
-		margin-left: 10%
+		position: relative
+		width: 100%
+		margin: 10% 0
 		left: 0
-		top: 0
-		// margin-top: 15%
 		text-align: left
-		&.servicing
-			margin-top: 5%
+		
 		h2
-			font-family: 'Droid Serif Bold'
-			color: $text-gray 
+			font-family: $h1-ff
+			color: $h1-col
 		
 	.img
-		position: absolute
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: center 
-		width: 100%
-		height: 50%
-		// display: none
+		width: 133%
+		height: 150px
+		margin-left: -21%
 		&-1
 			background-image: url(../images/customer-service-mobile.jpg)
 			top: 0 
 		&-2
 			background-image: url(../images/servicing-mobile.jpg)
 	.arrow
-		bottom: -42%
+		top: 94%
 		
-@media screen and (min-width: 321px)
-	.fifth-sec
-		margin-bottom: 70%
-		.arrow
-			bottom:	-33%
-@media screen and (min-width: 360px) //galaxy s5
-	.fifth-sec
-		margin-bottom: 60%
-		.arrow
-@media screen and (min-width: 414px) //iphone 6 plus
-	.fifth-sec
-		margin-bottom: 57%
-		.arrow
-			bottom: -33% 
-			
+
 @media screen and (min-width: 768px)
 	.fifth-sec
 		margin-bottom: 0
@@ -108,7 +83,7 @@
 			margin-top: 15%
 			text-align: left
 			h2
-				font-size: 3rem
+				font-size: $h1-fs-lg
 			&.servicing
 				margin-top: 10%
 			
@@ -119,6 +94,7 @@
 			background-position: center 
 			width: 100%
 			height: 50%
+			margin-left: 0
 			&-1
 				background-image: url(../images/customer-service.jpg)
 				top: 50%

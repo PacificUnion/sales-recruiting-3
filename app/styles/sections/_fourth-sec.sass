@@ -1,15 +1,12 @@
 .fourth-sec
-	margin-bottom: 140%
 	.img-block
-		position: absolute
-		height: 30%
-		width: 100%
+		position: relative
+		width: 133%
 		top: 0
-		left: 0
-		background-image: url(../images/marketing-mobile.jpg)
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center 
+		left: -21%
+		
+		img
+			width: 100%
 		
 		.play
 			position: absolute
@@ -22,39 +19,15 @@
 			cursor: pointer
 	
 	.text-content
-		position: absolute
-		width: 85%
-		height: 100%
-		left: 10%
-		top: 30%
+		position: relative
+		width: 100%
 		text-align: left
-		// transform: translate(-50%, -50%)	
+		margin-bottom: 80px 
 	.arrow
 		position: absolute
-		bottom: -91%
+		top: 96%
 		left: 50%
-
-@media screen and (min-width: 321px)
-	.fourth-sec
-		margin-bottom: 50%
-		.arrow
-			bottom:	-21%
-@media screen and (min-width: 360px) //galaxy S5
-	.fourth-sec
-		margin-bottom: 85%
-		.arrow
-			bottom:	-50%
-@media screen and (min-width: 375px) //iphone 6
-	.fourth-sec
-		margin-bottom: 85%
-		.arrow
-			bottom: -52%
-@media screen and (min-width: 414px) //iphone 6 plus
-	.third-sec
-		margin-bottom: 60%
-		.arrow
-			bottom: -33% 
-
+	
 @media screen and (min-width: 768px)
 	.fourth-sec
 		margin-bottom: 0
@@ -63,6 +36,7 @@
 			height: 100%
 			width: 50%
 			background-image: url(../images/marketing.jpg)
+			left: 0
 		.text-content
 			position: absolute
 			width: 30%
