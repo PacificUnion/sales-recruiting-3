@@ -74,17 +74,13 @@
 		color: $white
 		font-family: 'Gotham Book'
 		font-size: 1.5rem
-	[placeholder]
-		color: $white
-		&::-webkit-calendar-picker-indicator
-			background-color: transparent
+	
 	select
 		color: $text-gray
 		background-color: $white
 		padding: 0
-		&[name='state']
-			color: $text-gray
-		
+		// &[name='state']
+		// 	color: $white
 	form
 		top: 10%
 		width: 100%
@@ -105,6 +101,7 @@
 		// top: 110%
 		margin-top: 5% 
 		margin-left: 10%
+		margin-bottom: 5%;
 		cursor: pointer  
 		transition: all 300ms ease-in
 		&:hover
@@ -161,59 +158,70 @@
 @media screen and (min-width: 768px)	
 	.form-contact
 		width: 70%
-		form
-			top: 25%
-			width: 90% 
-			margin-left: 7%
-			
-		input, select, textarea
-			width: 42.5%
-			margin: 2% 2.5%
-			height: 5rem
-			font-size: 1.6rem
-			background-color: rgba(0,0,0,0.5)
-			position: relative
-			padding: 0
-			&::-webkit-input-placeholder
+		.form-container
+			form
+				top: 25%
+				width: 90% 
+				margin-left: 7%
+				p
+					position: relative
+					width: 90%
+					margin: 0 2.5%
+				
+			input, select, textarea
+				width: 42.5%
+				margin: 2% 2.5%
+				height: 5rem
+				font-size: 1.6rem
+				background-color: rgba(0,0,0,0.5)
+				position: relative
+				padding: 0
+				&::-webkit-input-placeholder
+					color: $white
+			[placeholder]
 				color: $white
-		select
-			option
+				&::-webkit-calendar-picker-indicator
+					background-color: transparent
+			select
+				option
+					color: $white
+			.close
+				top: 2%
+			h4
+				top: 5%
+			p
 				color: $white
-		.close
-			top: 2%
-		h4
-			top: 5%
-		p
-			color: $white
-			font-family: 'Gotham Book'
-			width: 80%
-			margin-left: 10%
-			text-align: left
-			top: 10%
-			position: absolute
-			transform: none
-			opacity: 1 
-			transition: none
-			font-size: 1.5rem
-		#address
-			display: block
-			width: 90.5%
-		.button
-			text-transform: uppercase 
-			text-align: center
-			// background-color: rgba(255, 255, 255, 0.3)
-			border: $white 1px solid
-			padding: 1.5rem 3rem
-			color: $white
-			width: 90%
-			font-family: 'Gotham Bold'
-			position: absolute
-			top: 110%
-			margin-left: 3%
-			cursor: pointer  
-			transition: all 300ms ease-in
-			&:hover
-				background-color: rgba(0,0,0,0.3)
+				font-family: 'Gotham Book'
+				width: 80%
+				margin-left: 10%
+				text-align: left
+				top: 10%
+				position: absolute
+				transform: none
+				opacity: 1 
+				transition: none
+				font-size: 1.5rem
+				display: block
+			#address
+				display: block
+				width: 90.5%
+			.button
+				text-transform: uppercase 
+				text-align: center
+				// background-color: rgba(255, 255, 255, 0.3)
+				border: $white 1px solid
+				padding: 1.5rem 3rem
+				color: $white
+				width: 90%
+				font-family: 'Gotham Bold'
+				position: absolute
+				top: 110%
+				margin: 0 3%
+				
+				cursor: pointer  
+				transition: all 300ms ease-in
+				&:hover
+					background-color: rgba(0,0,0,0.3)
 		.thank-you
 			.funny-font
 				font-size: 4rem				
@@ -224,6 +232,9 @@
 @media screen and (min-width: 1024px)
 	.form-contact
 		width: 60%
+		.form-container
+			form
+				top: 20%
 	input, select, textarea
 		font-size: 1.2rem
 		height: auto

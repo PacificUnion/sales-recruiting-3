@@ -27,6 +27,15 @@
         <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
         
+        <!-- Google Analytics -->
+        <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='https://www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-42026516-1');ga('send','pageview');
+        </script>
     </head>
     <body>
     <!--[if IE]>
@@ -421,7 +430,7 @@
             </footer>
 
             </div>
-     <!-- contact form -->
+    <!-- contact form -->
     <div class="form-contact">
         <div class="close">
             <span></span>
@@ -435,10 +444,11 @@
                 <input type="text" id="last_name" name="last_name" value=""  required  placeholder="Last Name">
                 <input type="email" id="email" name="email" value="" required  placeholder="Email Address">
                 <input type="text" id="phone" name="phone" value=""  required placeholder="Phone Number">
+                <p>Interested in seeing what our Marketing team can do? Let us send you some samples.</p>
                 <input type="text" id="address" name="address" value="" placeholder="Home Address (optional)">
                 <input type="text" id="city" name="city" value=""  required  placeholder="City">
-                <select id="states" name="state" required >
-                    <option value disabled selected >State</option>
+                <select id="states" name="state" required placeholder="State">
+                    <option value="" disabled selected>State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -492,7 +502,8 @@
                     <option value="WY">Wyoming</option>
                 </select>
                 <input pattern="[0-9]*" maxlength="5" required name="zip" id="zip" placeholder="Zip Code">
-                <div class="button" id="submit-contact-us" onclick="submitForm();">Submit</div>
+                <input type="text" id="referrer" name="referrer" value="" placeholder="Referred by: (optional)">
+                <div class="button" id="submit-contact-us" onclick="submitForm();">Get in touch</div>
             </form>
         </div>
         <div class="thank-you">
@@ -540,16 +551,6 @@
         }
     </script>
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -567,5 +568,14 @@
     <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K65R3M');</script>
+    <!-- End Google Tag Manager -->
+
   </body>
 </html>
