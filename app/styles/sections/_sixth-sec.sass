@@ -5,23 +5,27 @@
 	background-position: top
 	
 	.carousel
+		display: none
 		position: relative
-		// position: absolute
-		// width: 70%
 		top: 5%
 	
 	.badges
 		width: 100%
-		height: 280px
+		// height: 240px
 		left: 0
 		position: relative
-		// display: flex
-		justify-content: center
 		top: 10%
 		.badge
 			padding: 1rem 0.5rem
-			width: 7rem
-			height: 7rem 
+			width: 9rem
+			height: auto
+		span
+			color: $white
+			font-size: 20px
+	.fine-print
+		color: $white
+		font-family: 'Gotham Book'
+		font-size: 12px  
 			
 	
 	.button
@@ -37,56 +41,53 @@
 		cursor: pointer
 		transition: all 300ms ease-in
 		margin-bottom: 2rem
-		 
+		
+		margin-top: 80px 
+
 		&:hover
 			background-color: rgba(0,0,0,0.3)
 			border: $white 1px solid
 		
 	footer
 		bottom: 0
-		// left: 0
-		// right: 0
-		// position: absolute
 		position: relative
 		
 @media screen and (min-width: 768px)
 	.sixth-sec
-
-		.carousel
-			// position: relative
-			position: absolute
-			width: 70%
-			top: 10%
+		.container
+			height: 100%
+			width: 100%
+			position: relative 
+		
+		.button
+			width: 40%
+			left: 50%
+			margin-left: -20%
+			margin-top: 35%
+			
+			&:hover
+				background-color: rgba(0,0,0,0.3)
+				border: $white 1px solid
+			
 		
 		.badges
 			width: 80%
 			left: 10%
-			height: 22%
+			height: auto
 			position: relative
 			display: flex
 			justify-content: center
-			// top: 4%
+			top: auto
+			margin-top: 80px  
+			align-items: flex-start
 			.badge
 				margin: 0 2rem
 				width: 9rem
 				height: 11rem
 		
-		.button
-		
-			padding: 1.5rem
-			color: $white
-			width: 25%
-			font-family: 'Gotham Bold'
-			position: absolute
-			top: 62%
-			left: 50%
-			margin-left: -12.5%
-			cursor: pointer
-			transition: all 300ms ease-in
-			&:hover
-				background-color: rgba(0,0,0,0.3)
-				border: $white 1px solid
-			
+		.fine-print
+			margin-bottom: -50px
+			position: relative
 		footer
 			bottom: 0
 			left: 0
@@ -94,51 +95,17 @@
 			position: absolute
 			// position: relative
 
-
-@media screen and (max-height: 960px) and (min-width: 768px)
+@media screen and (min-width: 1024px) and (max-height: 768px)
 	.sixth-sec
-		.carousel
-			top: 5%
-			&-indicators
-				top: 68%
-			.item
-				p
-					font-size: 1.25rem
-					line-height: 2rem
-				img
-					width: 12rem
-					
-			.next, .prev
-				top: 10%
-		.badges
-			top: 3%
-			.badge
-				width: 9rem
-				height: 9rem
-
 		.button
-			top: 57%
-
-@media screen and (max-height: 768px) and (min-width: 1024px)
+			margin-top: 20%
+		.badges
+			margin-top: 40px
+			
+@media screen and (min-width: 1440px)
 	.sixth-sec
-		.carousel
-			top: 5%
-			&-indicators
-				top: 70%
-			.item
-				p
-					font-size: 1.4rem
-					line-height: 2rem
-				img
-					width: 12rem
-					
-			.next, .prev
-				top: 10%
 		.badges
-			top: 3%
 			.badge
-				width: 9rem
-				height: 9rem
-
-		.button
-			top: 57%
+				width: 13rem
+				height: auto
+				padding: 0
