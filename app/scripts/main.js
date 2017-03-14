@@ -180,7 +180,9 @@ $(function() {
                 $('#sec-4 .play, #sec-4 .close-video').click(function(){
                     $('#video-sec-4').toggleClass('active');
                 });
-                
+                $('#sec-3 .max-play, #sec-3 .close-video').click(function(){
+                    $('#video-sec-3').toggleClass('active');
+                });
             }
       
         	// scrollOverflow: true,
