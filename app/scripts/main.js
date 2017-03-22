@@ -167,10 +167,15 @@ $(function() {
                     $('.form-contact').removeClass('active');
                 });
 
-                $('#sec-4 .play, #sec-4 .close-video').click(function(){
+                $('#sec-4 .play-button, #sec-4 .video-overlay').click(function(){
                     $('#video-sec-4').toggleClass('active');
+                    $('video').get(2).play();
+                    if(!$('#video-sec-4').hasClass('active')){
+                        $('video').get(2).pause();
+                    }
                 });
-                $('#sec-3 .max-play, #sec-3 .close-video').click(function(){
+
+                $('#sec-3 .max-play, #sec-3 .video-overlay').click(function(){
                     $('#video-sec-3').toggleClass('active');
                     $('video').get(1).play();
                     if(!$('#video-sec-3').hasClass('active')){
