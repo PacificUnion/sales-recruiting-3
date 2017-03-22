@@ -160,16 +160,6 @@ $(function() {
                 $('video').get(0).play();
 
 
-                $('.video-frame-1, #video-testimonial-1 ').click(function(){
-                    $('#video-testimonial-1').toggleClass('active');
-                });
-                $('.video-frame-2, #video-testimonial-2 ').click(function(){
-                    $('#video-testimonial-2').toggleClass('active');
-                });
-                $('.video-frame-3, #video-testimonial-3 ').click(function(){
-                    $('#video-testimonial-3').toggleClass('active');
-                });
-
                 $('#contact-button, .nav-contact').click(function(){
                     $('.form-contact').addClass('active');
                 });
@@ -182,6 +172,10 @@ $(function() {
                 });
                 $('#sec-3 .max-play, #sec-3 .close-video').click(function(){
                     $('#video-sec-3').toggleClass('active');
+                    $('video').get(1).play();
+                    if(!$('#video-sec-3').hasClass('active')){
+                        $('video').get(1).pause();
+                    }
                 });
             }
       
