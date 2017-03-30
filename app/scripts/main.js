@@ -123,24 +123,39 @@ $(function() {
                 }
                 if(index == 1 ){
                     $('video').get(0).play();
+                    $('.local a[href="#Operations"]').addClass('active');
+                    $('nav .nav-title a').css('text-shadow', 'none');
                 }else{
                     $('.logo-wrapper').css('display', 'none');
+                    $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
                 }
                 if(index == 2){
+                    $('.local a[href="#Operations"]').addClass('active');
                     $('.logo-wrapper').css('display', 'none');
+                }else{
+                    $('.local a[href="#Operations"]').removeClass('active');
                 }
                 if(index == 3){
+                    $('.local a[href="#Technology"]').addClass('active');
                     $('.block-1').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
                     $('.map-wrapper').addClass('active'),
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active');
-                }
-                if(index == 1){
-                    $('nav .nav-title a').css('text-shadow', 'none');
                 }else{
-                    $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
+                    $('.local a[href="#Technology"]').removeClass('active');
+                }
+                if(index == 4){
+                    $('.local a[href="#Marketing"]').addClass('active');
+                }else{
+                    $('.local a[href="#Marketing"]').removeClass('active');
+                }
+
+                if(index == 5){
+                    $('.local a[href="#Servicing"]').addClass('active');
+                }else{
+                    $('.local a[href="#Servicing"]').removeClass('active');
                 }
                
             },
