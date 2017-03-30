@@ -8,7 +8,7 @@
 	z-index: -100
 	opacity: 0
 	transition: all 300ms ease-in 
-	display: block
+	
 
 	.close-video
 		left: 2%
@@ -48,13 +48,12 @@
 		left: 0
 		opacity: 0 
 		transform: scale(0.5)
-		z-index: 101
 		transition: all 500ms ease-in 400ms
 	&.active
 		opacity: 1
 		transform: scale(1)
 		z-index: 100
-		// display: block
+		display: block
 		video
 			opacity: 1
 			transform: scale(1)
@@ -115,7 +114,15 @@
 			opacity: 0 
 			transform: scale(0.5)
 			transition: all 500ms ease-in 400ms
-		
+		&.active
+			opacity: 1
+			transform: scale(1)
+			z-index: 100
+			
+			video
+				opacity: 1
+				transform: scale(1)
+				
 			
 					
 					

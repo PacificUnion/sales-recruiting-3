@@ -79,7 +79,7 @@ $(function() {
             controlArrows: true,
             verticalCentered: true,
            
-            fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper',
+            fixedElements: '.nav-wrapper, .menu, .form-contact, .logo-wrapper, .video-overlay',
             responsiveWidth: 768,
             responsiveHeight: 0,
             responsiveSlides: false,
@@ -158,6 +158,7 @@ $(function() {
 
               
                 $('video').get(0).play();
+                $('video').get(1).pause();
 
 
                 $('#contact-button, .nav-contact').click(function(){
@@ -181,6 +182,13 @@ $(function() {
                     if(!$('#video-sec-3').hasClass('active')){
                         $('video').get(1).pause();
                     }
+                });
+
+                $('.close-video').click(function(){
+                    $('video').get(0).pause();
+                    $('video').get(1).pause();
+                    $('video').get(2).pause();
+                    $('.video-overlay').removeClass('active');
                 });
             }
       
