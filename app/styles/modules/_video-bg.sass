@@ -1,3 +1,4 @@
+
 .video-wrapper
 	position: absolute
 	top: 50%
@@ -9,24 +10,19 @@
 	height: auto
 	overflow: hidden
 	z-index: 1
-
 	background-image: url(../images/servicing-loop-mobile.jpg)
 	background-size: cover
-	background-position: center top 
-	>video
-		display: none
+	background-position: center top
+
+.backgroundVideo
+	display: none
 
 @media screen and (min-width: 768px)
 	.video-wrapper
 		background-image: url(../images/servicing-loop.jpg)
-		>video
-			display: inline-block
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-			min-width: 100%
-			min-height: 100% 
-			width: auto
-			height: auto
-			overflow: hidden
+		
+	.backgroundVideo
+		display: block
+		
+.wistia_click_to_play
+	position: static !important

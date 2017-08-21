@@ -1,17 +1,60 @@
-// .badges
-// 	width: 80%
-// 	left: 10%
-// 	position: relative
-// 	display: flex
-// 	justify-content: center
-// 	top: 4%
-// 	.badge
-// 		margin: 0 2rem
-// 		width: 9rem
+.badges-sec
+	display: flex
+	flex-flow: row wrap
+	position: relative
+	width: 300px
+	left: 50%
+	margin-left: -150px
+	
+	
+	.badge-container
+		position: relative
+		height: auto
+		margin-top: 40px
+	
+	.citation
+		font-family: 'Gotham Book Italic', 'Gotham Book'
+		font-size: 14px 
+		width: 90%
+		margin-left: 5%
+		padding: 20px 0 40px
+		color: $white
+		text-align: center
+		a
+			color: $blue
+			text-decoration: none
+			font-weight: 700 
+			&:hover
+				text-decoration: underline
+				
+	.majesty-line
+		display: none
 		
-// @media screen and (min-width: 768px)
-// 	.badges
-// 		top: 2%
-// 		.badge
-// 			width: 7rem
-// 			margin: 0 1rem 
+	.badge
+		width: 100px
+		height: 100px
+
+		
+	@media screen and (min-width: 768px)
+		width: 100%
+		margin-left: 0
+		left: auto
+			
+		.majesty-line
+			width: 5%
+			height: 1px
+			background-color: $gray
+			display: inline-block
+			margin: 5px 25px
+	
+	@media screen and (min-width: 1024px)		
+		.badge
+			width: 125px
+			height: 125px
+	
+	@media screen and (min-width: 1440px)
+		.badge
+			width: 135px
+			height: 135px
+			
+	

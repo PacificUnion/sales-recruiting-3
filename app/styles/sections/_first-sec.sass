@@ -7,15 +7,15 @@
 	h1, h3
 		position: absolute
 		color: $white
-		// color: red
 		text-align: center
 		width: 90%
 		margin-left: 5%
 	h1
 		font-family: 'Gotham Book'
-		font-size: 30px 
-		top: 35%
-		font-weight: 500 
+		font-size: 22px
+		top: 45%
+		transform: translateY(-50%)
+		font-weight: 500
 		
 	h3
 		font-family: 'Gotham Bold'
@@ -48,21 +48,17 @@
 		left: 50%
 		
 	@media screen and (min-width: 768px)
-		h1
-			font-size: 4rem
-			top: 44%
-			
-		h3
-			font-size: 2rem 
-			top: 50%
+		.text-content
+			h1
+				font-size: 30px
+				line-height: 45px
+			h3
+				font-size: 2rem 
+				top: 50%
 	@media screen and (min-width: 1024px)
 		h1, h3
-			width: 50%
-			margin-left: 25%
-		h1
-			font-size: 30px
-			top: 44%
-			
+			width: 70%
+			margin-left: 15%			
 		h3
 			font-size: 2rem 
 			top: 50%

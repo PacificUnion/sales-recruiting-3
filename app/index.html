@@ -7,37 +7,96 @@
         <meta name="description" content="Join the team that invests in technology and employee training and development! Learn how Pacific Union supports our mortgage loan officers in growing their career and success.">
         <meta name="keywords" content="mortgage loan officer training, mortgage loan officer jobs, how to become a mortgage loan officer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="canonical" href="http://www.pacificunionfinancial.com/careers/loan-officer-support">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <style>
+            .spinner_hol{
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: #f1f1f1;
+                z-index: 5000;
+                font-size: 1rem;
+                opacity: 1;
+                visibility: visible;
+                transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+            }
+            .spinner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -20rem;
+                margin-left: -20rem;
+                width: 40rem;
+                height: 40rem;
+            }
+            .spinner svg {
+                width: 100%;
+                height: 100%;
+            }
+            .spinner svg .house-icon-line {
+                stroke: #39B54A;
+                fill: none;
+                stroke-width: 3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+            }
+            .spinner svg .house-icon-circle {
+                fill: none;
+                stroke: #1465A5;
+                stroke-width: 3;
+                stroke-miterlimit: 10;
+            }
+            .house-icon-line{
+                stroke-dashoffset: 2502;
+                stroke-dasharray: 2502;
+                animation: dash 3s linear alternate infinite;
+            }
+            .hide{
+                visibility: hidden;
+                opacity: 0;
+            }
+            @keyframes dash{
+                from {
+                    stroke-dashoffset: 2502; 
+                }
+                to {
+                    stroke-dashoffset: 0; 
+                }
+            }
+        </style>
+
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-        <!-- <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" /> -->
         <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/index.css">
         <!-- endbuild -->
 
+        <!-- build:css styles/deferred.css -->
+        <link rel="stylesheet" href="styles/deferred.css">
+        <!-- endbuild -->
+
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
         
-        <!-- Google Analytics -->
-        <script>
-          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='https://www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','UA-42026516-1');ga('send','pageview');
-        </script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K65R3M');</script>
+        <!-- End Google Tag Manager -->
     </head>
-    <body>
+    <body onload="spinner();">
     <!--[if IE]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -129,10 +188,8 @@
                     <h1>We give our Loan Officers the tools and support they need to do what they do best &mdash; close more loans.</h1>
                 </div>
                 <div class="video-wrapper">
-                    <video muted preload="none" autoplay="true" loop poster="./images/servicing-loop.jpg" > 
-                        <source src="./video/servicing-loop.webm" type="video/webm">
-                        <source src="./video/servicing-loop.mp4" type="video/mp4">
-                    </video>
+
+                     <div id="wistia_po4lpneq0t" class="wistia_embed backgroundVideo wistia_async_po4lpneq0t" >&nbsp;</div>
                 </div>
                 <a href="#2" class="arrow light-gray"></a>
             </div>
@@ -182,8 +239,12 @@
             <!-- third section -->
             <div class="section third-sec" id="sec-3">
                 <div class="img-block">
-                    <img src="./images/mac-comp-play.png" alt="" class="desktop max-play">
-                    <img src="./images/mac-comp-mobile.png" alt="" class="mobile max-play">
+                    <div class="video-frame video-frame-1 wistia_embed wistia_async_2uymn1k1d7 popover=true popoverContent=link" >
+                        <a href="#">        
+                            <img src="./images/mac-comp-play.png" alt="" class="desktop max-play">
+                            <img src="./images/mac-comp-mobile.png" alt="" class="mobile max-play">
+                        </a>
+                    </div>
                 </div>
                 <div class="text-content">
                     <h2>Technology</h2>
@@ -211,23 +272,17 @@
                 
                 <a href="#4" class="arrow down"></a>
 
-                <div class="video-overlay" id="video-sec-3">
-                    <div class="close-video">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <video preload="none" autoplay="true" poster="" controls>
-                        <source src="video/TheMostInterestingLO-MAX-Only0217.webm" type="video/webm">
-                        <source src="video/max-intro.mp4" type="video/mp4">
-                    </video>
-                </div>
             </div> 
 
             <!-- fourth section -->
             <div class="section fourth-sec" id="sec-4">
                 <div class="img-block">
-                    <img src="./images/play-button.png" alt="" class="play-button play-animate">
-                    <img src="./images/marketing-mobile.jpg" alt="" class="mobile">
+                    <div class="video-frame video-frame-1 wistia_embed wistia_async_x02tixnl4n popover=true popoverContent=link" >
+                        <a href="#">  
+                            <img src="./images/play-button.png" alt="" class="play-button play-animate">
+                            <img src="./images/marketing-mobile.jpg" alt="" class="mobile">
+                        </a>
+                    </div>
                 </div>
                 <div class="text-content">
                     <h2>Marketing</h2>
@@ -241,18 +296,10 @@
 
                      <h3>Print Collateral</h3>
                      <p>We haven’t forgotten the basics. It’s important that you have attractive, accurate information to put in a borrower’s hand. All our flyers feature a fresh, unified design with excellent branding to keep you top of mind.</p>
+                      <p>Watch the video to learn more.</p>
                 </div>
                 <a href="#5" class="arrow down gray"></a>
-                <div class="video-overlay" id="video-sec-4">
-                    <div class="close-video">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <video preload="none" autoplay="true" poster="" controls>
-                        <source src="video/PUF-Marketing.webm" type="video/webm">
-                        <source src="video/PUF-Marketing.mp4" type="video/mp4">
-                    </video>
-                </div>
+              
             </div>
 
             <!-- fifth section -->
@@ -261,11 +308,11 @@
                     <div class="top-block img-2 img"></div>
                     <div class="bottom-block">
                         <div class="text-content text-animate">
-                            <h2>Customer Service</h2>
+                            <h2>Onboarding</h2>
                             <svg width="300" height="20" class="divider">
                                 <path d="M 0,0 l 250,0" />
                             </svg>
-                            <p>By putting the borrower experience at the center of our Retail business, we never lose sight of what’s important.</p>                            
+                            <p>We all know transitioning to a new company has its challenges. The Retail Business Support team here to help to guide you through the process and set you up for success. Pacific Union also offers the Specialty Lending Group to assist with your potential applications as your MLO license sponsorship is transferred.</p>                            
                         </div>
                     </div>
                 </div>
@@ -290,29 +337,26 @@
             
                     <div class="button" id="contact-button">Contact Us</div>
 
-                    <div class="badges">
-                        <a href="https://entp.hud.gov/sfnw/public/" target="_blank">
-                            <img src="./images/SVGs/badges/top-5-fha.svg" alt="" class="badge">
-                        </a>
-                        <a href="http://www.insidemortgagefinance.com/" target="_blank">
-                            <img src="./images/SVGs/badges/9th-largest-originator.svg" alt="" class="badge">
-                        </a>
-                        <a href="http://www.insidemortgagefinance.com/" target="_blank">
-                            <img src="./images/SVGs/badges/Mortgage-Lender.svg" alt="" class="badge">
-                        </a>
-                        <a href="https://www.glassdoor.com/Reviews/Pacific-Union-Financial-Reviews-E788214.htm" target="_blank">
-                            <img src="./images/SVGs/badges/Glassdoor-Rating.svg" alt="" class="badge">
-                        </a>
-                        <a href="https://www.zillow.com/lender-profile/Pacific%20Union/" target="_blank">
-                            <img src="./images/SVGs/badges/zillow-rating.svg" alt="" class="badge">
-                        </a>
-                        <a href="https://www.google.com/search?q=Pacific%20Union%20Financial%2C%20LLC%20NMLS%20%232221%208900%20Freeport%20Parkway%20%23150%20Irving&ludocid=14131749205967952128&hl=en#hl=en&q=Pacific+Union+Financial%2C+LLC+NMLS+%232221+8900+Freeport+Parkway+%23150+Irving&lrd=0x864c2bd53e112c2b:0xc41e0f0794a0d900,1" target="_blank">
-                            <img src="./images/SVGs/badges/google-rating-4.4.svg" alt="" class="badge">
-                        </a>
-                        <span>&ast;</span>
-                    </div>
+                    <div class="badges-sec consumer-direct">
+                        <div class="badge-container">
+                            <img src="./images/SVGs/badges/11th-largest-independent-originator-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/top-10-fha-sponsored-originator-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/top-25-lender-in-the-market-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/zillow-4.9-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/glassdoor-3.6-square.svg" alt="" class="badge">
 
-                    <p class="fine-print">&ast; Ratings as of Dec. 31, 2016</p>
+                            <img src="./images/SVGs/badges/google-4.6-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/top-10-government-lender-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/10-top100-mortgage-companies-square.svg" alt="" class="badge">
+                            <img src="./images/SVGs/badges/lendingtree-4.0-square.svg" alt="" class="badge">
+                        </div>
+
+                        <p class="citation">
+                            <span class="majesty-line"></span>
+                            For ranking information, <a href="https://www.pacificunionfinancial.com/awards" target="_blank"><br class="mobile">click here to learn more.</a>
+                            <span class="majesty-line"></span>
+                        </p>
+                    </div>
 
                 </div> <!-- end .container -->
            <footer>
@@ -412,7 +456,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-7 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-md-offset-0 col-lg-6">
-                                <p class="license-copy">&#169; 2016, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
+                                <p class="license-copy">&#169; 2017, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
                                   NMLS Consumer Access site <a href="http://www.nmlsconsumeraccess.org">http://www.nmlsconsumeraccess.org</a>.&nbsp; &nbsp;<br>Licensed Mortgage Banker-NYS Department of Financial Services.
                                 </p>
                             </div>
@@ -507,11 +551,39 @@
         </div>
     </div>
 
-  </div> <!--  end fullpage  -->
-     <!-- Deffered styles -->
+    </div> <!--  end fullpage  -->
+
+    <!-- Spinner -->
+    <script>
+        var spinTimer;
+
+        function spinner(){
+            var spinTimer = setTimeout(fadeOut(el), 3000); 
+        } 
+
+        var el = document.querySelector('.spinner_hol');
+
+        // fade out
+        function fadeOut(el){
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= .1) < 0) {
+                    // el.style.display = "none";
+                    el.className += " hide";
+                } else {
+                    requestAnimationFrame(fade);
+                    // el.style.display = "none";
+                       el.className += " hide";
+
+                }
+            })();
+        }
+    </script>
+    <!-- Deffered styles -->
     <noscript id="deferred-styles">
-      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=2.0.1"/>
-      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=2.0.1"/>
+      <link rel="stylesheet" type="text/css" href="styles/deferred.css?v=3.0.6"/>
+      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.6"/>
     </noscript>
     <script>
         var loadDeferredStyles = function() {
@@ -526,6 +598,12 @@
         if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
         else window.addEventListener('load', loadDeferredStyles);
     </script>
+
+    <!-- Wistia code to embed  -->
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <!-- Wistia Json LP for SEO -->
+    <script src="https://fast.wistia.com/embed/medias/2uymn1k1d7.jsonp" async></script>
+    <script src="https://fast.wistia.com/embed/medias/x02tixnl4n.jsonp" async></script>
    
     <script>
         function submitForm() {
@@ -565,9 +643,8 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
-    <script src="/bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script>
+    <!-- // <script src="/bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -575,17 +652,10 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K65R3M');</script>
-    <!-- End Google Tag Manager -->
+
 
   </body>
 </html>
